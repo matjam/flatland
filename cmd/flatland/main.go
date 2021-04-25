@@ -1,9 +1,11 @@
 package main
 
 import (
-	"github.com/matjam/flatland/internal/api"
+	"github.com/matjam/flatland/internal/cache"
 )
 
 func main() {
-	api.FetchBuckets()
+	objectCache := cache.New()
+
+	objectCache.Import("data/5m_sales_records.csv")
 }

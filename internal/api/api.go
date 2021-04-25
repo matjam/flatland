@@ -31,7 +31,7 @@ func FetchBuckets() {
 
 	// Get the first page of results for ListObjectsV2 for a bucket
 	output, err := client.ListObjectsV2(context.TODO(), &s3.ListObjectsV2Input{
-		Bucket: aws.String("my-bucket"),
+		Bucket: aws.String("ingest.stupendous.net"),
 	})
 	if err != nil {
 		log.Fatal(err)
